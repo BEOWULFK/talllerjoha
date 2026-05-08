@@ -1,4 +1,6 @@
 ---
+project:
+  type: website
 title: "FUNDAMENTOS DE ESTADÍSTICA EN LA ADMINISTRACIÓN PÚBLICA"
 subtitle: "TRABAJO ACADÉMICO"
 author: 
@@ -10,6 +12,7 @@ title-block-banner: "#FFC3D5"
 
 format:
   html:
+    embed-resources: true
     self-contained: true
     page-layout: full
     fontsize: 14pt
@@ -36,12 +39,13 @@ knitr:
     fig.width: 6
     fig.height: 6
     out.width: "70%"
-
 ---
-<div style="position:absolute; top:10px; right:10px;">
-<img src="esaplogo.png" width="150">
-</div>
 
+::: {style="position:absolute; top:10px; right:10px;"}
+<img src="esaplogo.png" width="150"/>
+:::
+
+```{=html}
 <style>
 body{
   background-color:#F4EDF7;
@@ -49,13 +53,14 @@ body{
   text-align:justify;
 }
 </style>
+```
 
-> **Asignatura:** Estadística  
-> **Docente:** Dagoberto Salgado Horta  
-> **Institución:** Esap  
+> **Asignatura:** Estadística\
+> **Docente:** Dagoberto Salgado Horta\
+> **Institución:** Esap\
 > **Fecha de entrega:** mayo de 2026
 
----
+------------------------------------------------------------------------
 
 # Historia de la Estadística
 
@@ -67,27 +72,27 @@ Desde las civilizaciones más antiguas, el ser humano ha sentido la necesidad de
 
 ## Aportes de las Civilizaciones Antiguas
 
-**Mesopotamia y Egipto (3000 a.C. - 500 a.C.)**  
+**Mesopotamia y Egipto (3000 a.C. - 500 a.C.)**\
 Los sumerios realizaban censos de ganado y granos para organizar el tributo. Los egipcios llevaban registros detallados de la producción agrícola a orillas del Nilo y usaban datos para planificar la construcción de las pirámides.
 
-**China (2000 a.C.)**  
+**China (2000 a.C.)**\
 El emperador Yao ordenó los primeros censos de población para conocer cuántos hombres podían trabajar y servir en el ejército.
 
-**Roma (siglo I a.C.)**  
+**Roma (siglo I a.C.)**\
 El Imperio Romano institucionalizó el *census*, un registro periódico de ciudadanos, propiedades y riqueza. Este fue uno de los sistemas estadísticos más avanzados de la antigüedad.
 
-**Grecia Clásica**  
+**Grecia Clásica**\
 Filósofos como Aristóteles reconocieron la importancia de la recolección sistemática de datos para el análisis político y social.
 
 ## Evolución en la Edad Moderna
 
-**Siglos XVII y XVIII — Nacimiento de la Estadística Matemática**  
+**Siglos XVII y XVIII — Nacimiento de la Estadística Matemática**\
 Con el desarrollo del cálculo de probabilidades por parte de **Blaise Pascal** y **Pierre de Fermat** (1654), la estadística adquirió bases matemáticas sólidas. John Graunt publicó en 1662 *Natural and Political Observations upon the Bills of Mortality*, considerado el primer trabajo estadístico moderno, analizando tasas de mortalidad en Londres.
 
-**Siglo XIX — Estadística Descriptiva e Inferencial**  
+**Siglo XIX — Estadística Descriptiva e Inferencial**\
 **Carl Friedrich Gauss** desarrolló el método de mínimos cuadrados y describió la distribución normal. **Adolphe Quetelet** aplicó métodos estadísticos a las ciencias sociales, creando el concepto del "hombre promedio". **Francis Galton** introdujo conceptos como correlación y regresión.
 
-**Siglo XX — Era Moderna**  
+**Siglo XX — Era Moderna**\
 **Ronald A. Fisher** revolucionó la estadística con el diseño experimental y el análisis de varianza (ANOVA). **Karl Pearson** formalizó el coeficiente de correlación. La estadística se convirtió en herramienta fundamental para ciencias naturales, sociales y económicas.
 
 ## Importancia en la Actualidad
@@ -146,7 +151,7 @@ kable(timeline,
       align = c("l", "l", "l"))
 ```
 
----
+------------------------------------------------------------------------
 
 # Conceptos Fundamentales de la Estadística
 
@@ -156,10 +161,10 @@ kable(timeline,
 
 Sus principales herramientas son: tablas de frecuencia, gráficos, medidas de tendencia central (media, mediana, moda) y medidas de dispersión (varianza, desviación estándar).
 
-> **Ejemplo en administración pública:**  
+> **Ejemplo en administración pública:**\
 > La Alcaldía de Pasto elabora un informe anual con el promedio de quejas ciudadanas recibidas por dependencia, el porcentaje de trámites resueltos en menos de 5 días y un histograma de los tiempos de respuesta. Todo esto es estadística descriptiva: describe lo que ocurrió sin hacer proyecciones.
 
----
+------------------------------------------------------------------------
 
 ## Estadística Inferencial
 
@@ -167,64 +172,64 @@ Sus principales herramientas son: tablas de frecuencia, gráficos, medidas de te
 
 Utiliza herramientas como intervalos de confianza, pruebas de hipótesis y modelos de regresión.
 
-> **Ejemplo en administración pública:**  
+> **Ejemplo en administración pública:**\
 > El DANE encuesta a 10.000 hogares de Colombia para estimar la tasa de pobreza multidimensional de todo el país (aproximadamente 50 millones de personas). A partir de esa muestra, infiere el comportamiento de la población total con un margen de error del ±2%.
 
----
+------------------------------------------------------------------------
 
 ## Población
 
 **Definición:** Conjunto completo de elementos, individuos u objetos que comparten una o más características comunes y sobre los cuales se desea obtener información.
 
-> **Ejemplo en administración pública:**  
+> **Ejemplo en administración pública:**\
 > Para evaluar la satisfacción con el servicio de acueducto en Pasto, la población sería el total de hogares con conexión domiciliaria al sistema de acueducto municipal, es decir, todos los usuarios registrados.
 
----
+------------------------------------------------------------------------
 
 ## Muestra
 
 **Definición:** Subconjunto representativo de la población, seleccionado mediante un procedimiento definido, que permite obtener información válida sin necesidad de estudiar a todos los elementos.
 
-> **Ejemplo en administración pública:**  
+> **Ejemplo en administración pública:**\
 > Para la misma evaluación del acueducto, en lugar de encuestar a los 80.000 hogares conectados, se seleccionan aleatoriamente 400 hogares distribuidos por barrios. Esa selección es la muestra.
 
----
+------------------------------------------------------------------------
 
 ## Parámetro
 
 **Definición:** Medida numérica que describe una característica de la **población**. Es un valor fijo (aunque generalmente desconocido) que se intenta estimar a través de la muestra.
 
-> **Ejemplo en administración pública:**  
+> **Ejemplo en administración pública:**\
 > El ingreso promedio **real** de todos los empleados públicos de Nariño es un parámetro. No se conoce exactamente a menos que se consulte a cada uno de ellos, pero existe como valor verdadero.
 
----
+------------------------------------------------------------------------
 
 ## Estadístico
 
 **Definición:** Medida numérica calculada a partir de los datos de una **muestra**. Se utiliza para estimar el parámetro correspondiente de la población.
 
-> **Ejemplo en administración pública:**  
+> **Ejemplo en administración pública:**\
 > Si se encuesta a 200 empleados públicos de Nariño y se calcula su ingreso promedio, ese resultado es un estadístico. Se usa para aproximarse al parámetro real (ingreso promedio de toda la población de empleados).
 
----
+------------------------------------------------------------------------
 
 ## Muestreo
 
 **Definición:** Proceso mediante el cual se seleccionan los elementos que formarán parte de la muestra. Existen diferentes tipos: muestreo aleatorio simple, estratificado, por conglomerados, sistemático, entre otros.
 
-> **Ejemplo en administración pública:**  
+> **Ejemplo en administración pública:**\
 > Para evaluar el programa de subsidios de vivienda en el departamento de Nariño, el gobierno utiliza **muestreo estratificado**: divide los beneficiarios por municipio (estratos) y selecciona aleatoriamente un porcentaje de cada uno, garantizando que todos los municipios estén representados.
 
----
+------------------------------------------------------------------------
 
 ## Sesgo
 
 **Definición:** Error sistemático que ocurre cuando el proceso de recolección de datos o el diseño del estudio favorece ciertos resultados sobre otros, produciendo estimaciones que no reflejan la realidad de la población.
 
-> **Ejemplo en administración pública:**  
+> **Ejemplo en administración pública:**\
 > Si para medir la satisfacción con los servicios de salud pública solo se encuesta a pacientes que asistieron voluntariamente a una jornada de socialización, los resultados estarán sesgados: es probable que quienes asistieron tengan una opinión más favorable que el ciudadano promedio que no asiste a ese tipo de eventos.
 
----
+------------------------------------------------------------------------
 
 # Variables Estadísticas
 
@@ -253,7 +258,7 @@ Son aquellas que se expresan **numéricamente** y admiten operaciones matemátic
 ## Escalas de Medición
 
 | Escala | Características | Operaciones permitidas |
-|--------|-----------------|------------------------|
+|----------------|-----------------------|---------------------------------|
 | **Nominal** | Categorías sin orden ni magnitud | Conteo, moda |
 | **Ordinal** | Categorías con orden, sin distancia definida | Conteo, mediana, moda |
 | **Intervalo** | Distancias iguales entre valores, sin cero absoluto | Media, desviación estándar |
@@ -350,7 +355,7 @@ kable(variables,
       align = c("l","c","c","c","l","l"))
 ```
 
----
+------------------------------------------------------------------------
 
 # Aplicaciones en la Administración Pública
 
@@ -360,25 +365,25 @@ La estadística es una herramienta de gobernanza. Sin datos confiables y bien an
 
 Los **indicadores de gestión** son medidas cuantitativas que permiten evaluar el desempeño de una entidad pública frente a sus metas. Se construyen a partir de datos estadísticos recolectados periódicamente.
 
-**Ejemplo práctico:**  
+**Ejemplo práctico:**\
 La Secretaría de Hacienda de Nariño mide mensualmente el **porcentaje de ejecución presupuestal**:
 
 $$\text{Indicador} = \frac{\text{Presupuesto ejecutado}}{\text{Presupuesto total aprobado}} \times 100$$
 
-Si al mes de marzo se han ejecutado $12.000 millones de un presupuesto de $50.000 millones, el indicador es del 24%. La estadística descriptiva permite comparar este valor con años anteriores y con municipios similares.
+Si al mes de marzo se han ejecutado \$12.000 millones de un presupuesto de \$50.000 millones, el indicador es del 24%. La estadística descriptiva permite comparar este valor con años anteriores y con municipios similares.
 
 ## Evaluación de Políticas Públicas
 
 Antes de ampliar, modificar o eliminar una política pública, es necesario evaluarla con rigor estadístico. Se utilizan grupos de control, encuestas de impacto y análisis de regresión.
 
-**Ejemplo práctico:**  
+**Ejemplo práctico:**\
 El gobierno departamental implementó un programa de microcréditos para pequeños comerciantes. Para evaluar su impacto, compara los ingresos promedio de los beneficiarios (grupo tratamiento) con los de comerciantes similares que no accedieron al programa (grupo control). Una prueba de hipótesis estadística permite determinar si la diferencia en ingresos es **estadísticamente significativa** o se debe al azar.
 
 ## Análisis de Pobreza
 
 El DANE y el DNP utilizan encuestas como la **Gran Encuesta Integrada de Hogares (GEIH)** para medir la pobreza monetaria y el **Índice de Pobreza Multidimensional (IPM)** en Colombia.
 
-**Ejemplo práctico:**  
+**Ejemplo práctico:**\
 El IPM combina 15 indicadores agrupados en 5 dimensiones (condiciones educativas, de la niñez, trabajo, salud y vivienda). Para Nariño, el análisis estadístico de estos indicadores permite identificar qué privaciones son más frecuentes y en qué municipios, orientando la inversión social hacia donde más se necesita.
 
 Una tabla de distribución de frecuencias de las privaciones por municipio permite visualizar rápidamente dónde se concentra la pobreza y qué tipo de intervención requiere cada territorio.
@@ -387,17 +392,17 @@ Una tabla de distribución de frecuencias de las privaciones por municipio permi
 
 La estadística permite monitorear si los servicios básicos están llegando efectivamente a la población.
 
-**Ejemplo práctico — Salud:**  
+**Ejemplo práctico — Salud:**\
 El Ministerio de Salud calcula la **tasa de cobertura de vacunación** por municipio:
 
 $$\text{Tasa de cobertura} = \frac{\text{Niños vacunados}}{\text{Niños en edad de vacunación}} \times 100$$
 
 Si en un municipio hay 1.200 niños entre 0 y 5 años y solo 840 están vacunados, la cobertura es del 70%. La estadística inferencial permite proyectar si la tendencia actual llevará o no a alcanzar la meta nacional del 95% antes de fin de año.
 
-**Ejemplo práctico — Educación:**  
+**Ejemplo práctico — Educación:**\
 La Secretaría de Educación analiza la **tasa de deserción escolar** por grado y por zona (urbana/rural). Con estos datos, diseña programas de permanencia escolar focalizados en los grados y territorios con mayor riesgo de abandono.
 
----
+------------------------------------------------------------------------
 
 # Referencias
 
